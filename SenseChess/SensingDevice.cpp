@@ -7,7 +7,7 @@ void SensingDevice::Init()
 {
 	// Allocate and prepare
 	buttonMap = AllocateMemory(kButtonsPerRow, kButtonsPerRow);	
-	lastTime = 0;
+	lastTime = millis();
 }
 
 void SensingDevice::Sense()
