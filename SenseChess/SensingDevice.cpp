@@ -5,6 +5,14 @@
 #include "SensingDevice.h"
 void SensingDevice::Init()
 {
+	// Initialize necessary pins and set SCL starting value to LOW
+	pinMode(kSCLpin, OUTPUT);
+	pinMode(kSDO0pin, INPUT_PULLUP);
+	pinMode(kSDO1pin, INPUT_PULLUP);
+	pinMode(kSDO2pin, INPUT_PULLUP);
+	pinMode(kSDO3pin, INPUT_PULLUP);
+	digitalWrite(SCL, LOW);
+	
 	// Allocate and prepare
 	buttonMap = AllocateMemory(kButtonsPerRow, kButtonsPerRow);	
 	lastTime = millis();
