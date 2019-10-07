@@ -8,7 +8,7 @@
 #else
 	#include "WProgram.h"
 #endif
-#include <A4988.cpp>
+#include <A4988.h>
 #include "Chessboard.h"
 
 class Display {
