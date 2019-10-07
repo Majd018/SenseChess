@@ -31,7 +31,7 @@ void SensingDevice::Sense()
 
 		delayMicroseconds(5);
 	}
-	delay(3);
+	delay(3);	// TODO: use a clock to determine this delay
 
 	// Now, update time information about how long each button has been pressed
 	unsigned long currentTime = millis();				// Get current time

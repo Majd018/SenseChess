@@ -1,4 +1,5 @@
 // the setup function runs once when you press reset or power the board
+#include <A4988.h>
 #include "SensingDevice.h"
 #include "Display.h"
 #include "Chessboard.h"
@@ -20,6 +21,7 @@ void setup() {
 	delay(1000);
 	Serial.println("[INFO] Starting SenseChess...");
 	sensingDevice.Init();
+	display.Init();
 }
 
 void loop() {
@@ -34,5 +36,8 @@ void loop() {
 		Serial.print(buttonX);
 		Serial.print(",");
 		Serial.println(buttonY);
+
+		ChessPiece piece = chessboard.DetermineChessPiece(buttonX, buttonY);
+		display.Show(piece);
 	}
 }
