@@ -4,6 +4,8 @@
 #include "Display.h"
 #include "Chessboard.h"
 
+//HEllo
+
 #pragma region Constants
 const unsigned long SERIAL_RATE = 38400;	// Serial communiciation bit 38400
 #pragma endregion
